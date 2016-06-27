@@ -50,13 +50,11 @@ Given a stoplist for a particular language and a text file written in that langu
 
 #### Usage
 
-* Process a frequency list directly:
+Process a frequency list directly:
 
     ./salient.rb frequency_list.txt
 
-_or_
-
-* Process any raw text file using a pipe:
+Process any raw text file using a pipe:
 
     ./corpus_freq.rb filename.txt | ruby salient.rb
 
