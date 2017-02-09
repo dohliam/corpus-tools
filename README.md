@@ -92,6 +92,25 @@ Print corpus statistics for a specified corpus. Just point this script at your c
 
 See the [statistics from the Swahili corpus](https://github.com/dohliam/more-stoplists/blob/master/sw/corpus_stats-sw.md) for an example of what the generated statistics look like.
 
+### small_wiki_to_text_corpus.rb
+
+This will extract the wiki text from a small mediawiki xml dump, such as the database backup dumps found [here](https://dumps.wikimedia.org/backup-index.html).
+
+Note: this will *only* work if the database is small enough to be read *entirely* into working memory (RAM).
+
+The intended use case is for extracting usable / analyzable text from minority language wikis. The resulting text can be piped to `stats.rb`, `corpus_freq.rb`, or other scripts in this repo.
+
+#### Usage
+
+If you have an extracted xml file:
+
+    ./small_wiki_to_text_corpus.rb database.xml
+
+Or work directly with the bzip-compressed dump:
+
+    bzcat database.bz2 | ruby small_wiki_to_text_corpus.rb
+
+
 ## License
 
 MIT.
