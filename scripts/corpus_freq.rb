@@ -22,7 +22,7 @@ def frequency_list(corpus)
 
 #   regex for strings that are words
 #   can't just be \w+ for most languages
-  words_re = /[^\n\s$0-9”“"\.,\!\?\(\)\[\]#&~`‘’:;<>–…´\*\/«»،؟।¿]+/
+  words_re = /[^\n\s$0-9”“"\.,\!\?\(\)\[\]#&~`‘’:;<>–…´\*\/«»،؟।¿\|—=\{\}%\+•·_\^]+/
 
   corpus.scan(words_re).each do |w|
 #   remove extraneous apostrophes and hyphens
