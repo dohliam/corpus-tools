@@ -13,7 +13,7 @@ def print_ngrams(dir, corpus, n)
   dir_name = File.split(dir)[1]
 
   ngram_corpus = UnicodeUtils.downcase(corpus)
-  ngram_corpus = ngram_corpus.gsub(/# .*/, "").gsub(/#/, "").gsub(/\n/, " ").gsub(/  +/, " ").gsub(/[\.,\?\!"“”]/, "")
+  ngram_corpus = ngram_corpus.gsub(/# .*/, "").gsub(/#/, "").gsub(/\n/, " ").gsub(/  +/, " ").gsub(/[\.,\?\!"“”•\(\)\[\]\{\}？！，。、（）]/, "")
 
   ngrams = parse_ngrams(n, ngram_corpus)
 
